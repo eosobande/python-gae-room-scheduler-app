@@ -1,0 +1,251 @@
+
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+footer {
+  vertical-align: bottom;
+  background-color: #000000cc;
+  font-weight: bolder;
+  padding: 20px 120px;
+  margin-top: 20px;
+}
+
+section {
+  min-height: 420px;
+  padding: 30px 120px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header {
+  background-color: #000000B2;
+  padding: 30px 120px;
+}
+
+label {
+  font-weight: bold;
+}
+
+h1 {
+  display: inline-block;
+  color: #ffb200;
+  margin: 0;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 54px;
+  color: #fff;
+}
+
+#smallBig {
+  font-size: 22px;
+}
+
+#main {
+  width: 60%;
+  display: inline-block;
+}
+
+#side {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+  border-left: 1px solid;
+  padding-left: 2.5%;
+  margin-left: 2%;
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="number"], input[type="datetime-local"] {
+  float: right;
+  margin-right: 10px;
+  background: none;
+  outline: none;
+  color: #ffffff;
+  width: 65%;
+  border: none;
+  vertical-align: bottom;
+  text-align: right;
+}
+
+input[type="submit"] {
+  background-color: #ffffffcc;
+  display: inline;
+  padding: 10px;
+  color: #0e0805;
+  border: none;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.cancel {
+  margin-left: 4%;
+}
+
+::placeholder {
+    color: #ffffff;
+    opacity: .7;
+}
+
+nav {
+  float: right;
+  border-bottom: 1px solid #ffb200;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+nav li {
+  margin: 10px 5px;
+  display: inline;
+}
+
+nav li a {
+  padding: 10px;
+  width: 40%;
+  border: 1px solid;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #ffb200;
+}
+
+nav li a:hover, .pagi a:hover {
+  background-color: #ffb20033;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+.pagi {
+  float: right;
+  margin-top: 20px;
+}
+
+.current, .booking, .bookingspan {
+  background-color: #ffffffcc;
+}
+
+.pagi a {
+  color: #ffb200;
+  padding: 10px;
+  margin: 20px 0 0 10px;
+}
+
+.pagi a, .gpu, .error, .success, .warn, .room, .booking, .bookingspan {
+  border-radius: 5px;
+}
+
+.booking, .bookingspan {
+  color: #0e0805;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.room {
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.room:hover {
+  background-color: #00000066;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+.gpu, .success, .error, .warn {
+  padding: 10px;
+}
+
+.gpu {
+  background-color: #ffb200cc;
+}
+
+.room {
+  background-color: #000000cc;
+}
+
+.success, .error, .warn {
+  text-align: center;
+}
+
+.success {
+  background-color: #00ff00cc;
+}
+
+.error {
+  background-color: #ff0000cc;
+}
+
+.warn {
+  background-color: #f4a460cc;
+}
+
+.booking p, .bookingspan p {
+  margin: 0;
+  display: inline-block;
+}
+
+.booking p {
+  width: 90%;
+}
+
+.booking a {
+  float: right;
+  background-image: url("edit.png");
+  width: 20px;
+  height: 35px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+  background-size: 20px;
+  border-left: 1px solid #ffffff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ff000066;
+}
+
+.booking a:hover{
+  background-color: #ff0000cc;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+.log_out {
+  width: 80%;
+  position: relative;
+  float: right;
+  text-decoration: none;
+  color:#fff;
+  margin: 0 10px;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  display: inline;
+}
+
+.p_class {
+  margin: 1.6em 20px;
+  display:list-item;
+
+}
+
+nav li.hover {}

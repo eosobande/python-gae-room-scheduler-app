@@ -1,0 +1,103 @@
+{% extends 'template.html' %}
+{% block content %}
+
+  <div id="main">
+
+    <h2 id="welcome">
+      {% if user %}
+        Hello {{ user.email() }}!
+      {% else %}
+        ROOM SCHEDULING SYSTEM
+      {% endif %}
+    </h2>
+
+    {% if user %}
+
+      <p><strong>
+        {% if filter %}
+          {{bookings|length}} booking(s) found for all rooms, for date: {{filter.strftime('%Y-%m-%d')}}
+        {% else %}
+          There are {{rooms|length}} room(s) available.
+        {% endif %}
+      </strong></p>
+
+      {% if rooms %}
+
+        <p>
+        {% for room in rooms %}
+          <a class="room" href="/booking?k={{ room.key.urlsafe() }}" title="add booking">Room {{ room.number }}</a>
+        {% endfor %}
+        </p>
+
+      {% else %}
+
+        <ul>
+          {% for booking in bookings %}
+            <li class="bookingspan">
+              <p>
+                <strong>Room:</strong> {{booking.room_id}},
+                <strong>Booked by:</strong> {{booking.name}},<br>
+                <strong>Email:</strong> {{booking.email}},
+                <strong>For:</strong> {{ booking.no_of_people }} {{ 'people' if booking.no_of_people > 1 else 'person' }}<br>
+                <strong>From:</strong> {{booking.time_from}},
+                <strong>To:</strong> {{booking.time_to}} <br>
+                <strong>Created On:</strong> {{booking.created}}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+
+      {% endif %}
+
+    {% else %}
+
+      <h3>Scheduling for your rooms & everything in it</h3>
+
+      <p id="smallBig">Kindly login to access the application.</p>
+
+    {% endif %}
+
+  </div>
+
+  <div id="side">
+
+    {% if user %}
+
+      <h2>Filter by date</h2>
+
+      <form method="post" action= "/">
+
+        <p class="gpu">
+          <label for="to">Date:</label>
+          <input required id="to" type="date" value="{{ filter.strftime('%Y-%m-%d') if filter else '' }}" name="date" />
+        </p>
+
+        <input type="submit" value="Filter" name="button" />
+
+      </form>
+
+      <h2>Add a new room</h2>
+    
+      {% if error %}
+        <p class="error">{{error}}</p>
+      {% elif success %}
+        <p class="success">Room created successful.</p>
+      {% endif %}
+
+      <form id="room_form" method="post" action= "/">
+
+        <p class="gpu">
+          <label for="no">Room Number:</label>
+          <input required id="no" type="number" min="1" name="no" />
+        </p>
+
+        <input type="submit" value="Create" name="button" />
+
+      </form>
+
+      {% endif %}
+
+  </div>
+
+{% endblock %}
+

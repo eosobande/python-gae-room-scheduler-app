@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Room Scheduler</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" >
+  </head>
+  <body>
+
+    <header>
+
+      <a title="home" href="/"><h1>roomScheduler.ie</h1></a>
+
+      <nav>
+        <li><a href='{{ url }}'>{{ url_string }}</a></li>
+      </nav>
+
+    </header>
+
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+
+    <footer>&copy 2018 roomScheduler. All Rights Reserved.<span style="text-align: right; float: right;">Emmanuel Sobande - 2955118</span></footer>
+
+  </body>
+</html>
